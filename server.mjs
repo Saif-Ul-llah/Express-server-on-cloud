@@ -5,12 +5,12 @@ import path from 'path';
 console.log("i am a sever machice or software");
 const app = express()
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
 
   console.log("request ip",req.ip);
-  res.send('Hello World! saif is here'+ new Date().toString());
+  res.send('Hello World! '+ new Date().toString());
 
 })
 
