@@ -4,7 +4,8 @@ import path from 'path';
 
 console.log("i am a sever machice or software");
 const app = express()
-const port = 3000
+
+const port = process.env.PORT || 3001;
 
 app.get('/', (req, res) => {
 
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 const __dirname =path.resolve();
-app.use('/static', express.static(path.join(__dirname, './web/build')))
+app.use('/', express.static(path.join(__dirname, './web/build')))
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
